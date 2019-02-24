@@ -184,6 +184,7 @@ namespace Крестики_нолики
                         if (pole[2, j] == null)
                         {
                             pole[2, j] = znakpc;
+                            zashita = true;
                         }
                     }
                 }
@@ -444,6 +445,20 @@ namespace Крестики_нолики
                                 if (pole[1, 0] == znakuser && pole[2, 2] == znakuser)
                                 {
                                     pole[2, 0] = znakpc;
+                                }
+                                else
+                                {
+                                    if (pole[0, 1] == znakuser && pole[2, 2] == znakuser)
+                                    {
+                                        pole[0, 2] = znakpc;
+                                    }
+                                    else
+                                    {
+                                        if (pole[0, 1] == znakuser && pole[2, 0] == znakuser)
+                                        {
+                                            pole[0, 0] = znakpc;
+                                        }
+                                    }
                                 }
                             }
                         }
